@@ -29,7 +29,7 @@ namespace JubiLarian.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
-        public virtual int IdProduct { get; set; }
+        public virtual int IdProducent { get; set; }
         public virtual Producent Producent { get; set; }
 
         public virtual int IdType { get; set; }
