@@ -1,0 +1,40 @@
+﻿@page
+@model JubiLarian.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Asortyment";
+}
+
+<h1 class="text-black-50">Nasz @ViewData["Title"]</h1>
+<hr />
+<div class="text-center border p-3 mt-5">
+    <form method="post">
+        @if(Model.Products.Count() > 0)
+        {
+            @foreach(var item in Model.Products)
+            {
+                <div id="TextSide" class="text-left">
+                    <a class="text-justify">@Html.DisplayNameFor(m => item.Name): @Html.DisplayFor(m => item.Name)</a>
+                    <a class="text-justify">@Html.DisplayNameFor(m => item.Producent.Name): @Html.DisplayFor(m => item.Producent.Name)</a>
+                    <a class="text-justify">@Html.DisplayNameFor(m => item.Type.Name): @Html.DisplayFor(m => item.Type.Name)</a>
+                    @if (int.Parse(Html.DisplayFor(m => item.Quantity).ToString()) > 0)
+                    {
+                        <a class="text-success">Produkt jest dostępny</a>
+                    }
+                    else
+                    {
+                        <a class="text-danger">Produkt jest niedosepny</a>
+                    }
+                    <a class="text-justify">@Html.DisplayNameFor(m => item.Price): @Html.DisplayFor(m => item.Price)</a>
+                    <button class="btn btn-info text-white" asp-route-id="@Html.DisplayFor(m => item.Id)" asp-page="/Ditails">Szczegóły</button>
+                    <hr />
+                </div>
+            }
+        }
+        else
+        {
+            <p class="text-warning text-left">Obecnie nie ma tutaj dostępnych produktów</p> 
+        }
+    </form>
+</div>
+

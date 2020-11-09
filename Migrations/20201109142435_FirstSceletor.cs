@@ -2,7 +2,7 @@
 
 namespace JubiLarian.Migrations
 {
-    public partial class FirstStructure : Migration
+    public partial class FirstSceletor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,7 +45,7 @@ namespace JubiLarian.Migrations
                     Images = table.Column<byte>(nullable: false),
                     Quantity = table.Column<int>(nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IdProduct = table.Column<int>(nullable: false),
+                    IdProducent = table.Column<int>(nullable: false),
                     ProducentId = table.Column<int>(nullable: true),
                     IdType = table.Column<int>(nullable: false),
                     TypeId = table.Column<int>(nullable: true)

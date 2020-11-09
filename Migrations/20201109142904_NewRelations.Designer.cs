@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JubiLarian.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20201109121911_FirstStructure")]
-    partial class FirstStructure
+    [Migration("20201109142904_NewRelations")]
+    partial class NewRelations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,12 +51,6 @@ namespace JubiLarian.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
-
-                    b.Property<int>("IdProduct")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdType")
-                        .HasColumnType("int");
 
                     b.Property<byte>("Images")
                         .HasColumnType("tinyint");

@@ -4,14 +4,16 @@ using JubiLarian.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JubiLarian.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20201109142435_FirstSceletor")]
+    partial class FirstSceletor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,6 +51,12 @@ namespace JubiLarian.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
+
+                    b.Property<int>("IdProducent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdType")
+                        .HasColumnType("int");
 
                     b.Property<byte>("Images")
                         .HasColumnType("tinyint");
