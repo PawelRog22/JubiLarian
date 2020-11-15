@@ -44,10 +44,8 @@ namespace JubiLarian.Migrations
                     Description = table.Column<string>(maxLength: 250, nullable: true),
                     Quantity = table.Column<int>(nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IdProducent = table.Column<int>(nullable: false),
-                    ProducentId = table.Column<int>(nullable: true),
-                    IdType = table.Column<int>(nullable: false),
-                    TypeId = table.Column<int>(nullable: true)
+                    ProducentId = table.Column<int>(nullable: false),
+                    TypeId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,13 +55,13 @@ namespace JubiLarian.Migrations
                         column: x => x.ProducentId,
                         principalTable: "Producent",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Product_Type_TypeId",
                         column: x => x.TypeId,
                         principalTable: "Type",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

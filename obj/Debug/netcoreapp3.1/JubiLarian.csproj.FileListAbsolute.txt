@@ -174,3 +174,4 @@ D:\Dane\Programowanie\ASP .NET CORE\Nauka\Razor\JubiLarian\obj\Debug\netcoreapp3
 D:\Dane\Programowanie\ASP .NET CORE\Nauka\Razor\JubiLarian\obj\Debug\netcoreapp3.1\Razor\Pages\Products\Ditails.cshtml.g.cs
 D:\Dane\Programowanie\ASP .NET CORE\Nauka\Razor\JubiLarian\obj\Debug\netcoreapp3.1\Razor\Pages\Managment\AddProducent.cshtml.g.cs
 D:\Dane\Programowanie\ASP .NET CORE\Nauka\Razor\JubiLarian\obj\Debug\netcoreapp3.1\Razor\Pages\Managment\AddType.cshtml.g.cs
+D:\Dane\Programowanie\ASP .NET CORE\Nauka\Razor\JubiLarian\obj\Debug\netcoreapp3.1\Razor\Pages\Products\EditProduct.cshtml.g.cs

@@ -1,17 +1,19 @@
 ﻿@page
-@model JubiLarian.Pages.Managment.CreateProductModel
+@model JubiLarian.Pages.Products.EditProductModel
 
 @{
-    ViewData["Title"] = "Tworzenie Produktu";
+    ViewData["Title"] = "EditProduct";
 }
 
-<h1 class="text-black-50">@ViewData["Title"]</h1>
+<h1>EditProduct</h1>
 
+<h4>Product</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
+        <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Product.Id" />
             <div class="form-group">
                 <label asp-for="Product.Name" class="control-label"></label>
                 <input asp-for="Product.Name" class="form-control" />
@@ -19,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Product.Description" class="control-label"></label>
-                <input asp-for="Product.Description" class="form-control" type="text" />
+                <input asp-for="Product.Description" class="form-control" />
                 <span asp-validation-for="Product.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -49,7 +51,7 @@
             <div class="form-inline">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <input type="submit" value="Stwórz" class="btn btn-success" />
+                        <input type="submit" value="Zmień" class="btn btn-success" />
                     </li>
                     <li class="list-inline-item">
                         <a class="btn btn-danger" asp-page="Index">Przerwij i Wróć</a>

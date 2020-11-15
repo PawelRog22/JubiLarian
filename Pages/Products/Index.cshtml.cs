@@ -39,7 +39,7 @@ namespace JubiLarian.Pages.Products
                 {
                     NumerProduct = element.Id,
                     Name = element.Name,
-                    Producent = producents[element.IdProducent-1].Name,
+                    Producent = producents[element.ProducentId-1].Name,
                     IsAvailable = statusMsg,
                     Price = element.Price
                 });
