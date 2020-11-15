@@ -1,0 +1,12 @@
+﻿@page 
+@model JubiLarian.Pages.Menagment.IndexModel
+@{
+    ViewData["Title"] = "Panel zarządzania";
+}
+
+<h1 class="text-black-50">Główny @ViewData["Title"]</h1>
+<div class="text-center border m-6">
+    <a class="btn btn-group-vertical" asp-page="CreateProduct">Strórz nowy produkt</a>
+    <a class="btn btn-group-vertical" asp-page="AddProducent">Dodaj producenta</a>
+    <a class="btn btn-group-vertical" asp-page="AddType">Stwórz nowy typ</a>
+</div>

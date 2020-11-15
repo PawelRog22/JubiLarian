@@ -50,14 +50,11 @@ namespace JubiLarian.Migrations
                         .HasColumnType("nvarchar(250)")
                         .HasMaxLength(250);
 
-                    b.Property<int>("IdProduct")
+                    b.Property<int>("IdProducent")
                         .HasColumnType("int");
 
                     b.Property<int>("IdType")
                         .HasColumnType("int");
-
-                    b.Property<byte>("Images")
-                        .HasColumnType("tinyint");
 
                     b.Property<string>("Name")
                         .IsRequired()

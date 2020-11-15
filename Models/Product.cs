@@ -17,8 +17,6 @@ namespace JubiLarian.Models
         [StringLength(250)]
         [DataType(DataType.Text)]
         public string Description { get; set; }
-        [Display(Name="Zdjęcie")]
-        public byte Images { get; set; }
         [Range(0,9000)]
         [Required]
         [Display(Name="Ilość")]

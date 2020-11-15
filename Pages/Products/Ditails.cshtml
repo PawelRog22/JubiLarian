@@ -1,0 +1,81 @@
+﻿@page
+@model JubiLarian.Pages.Products.DitalsModel
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Product @Html.DisplayFor(model => model.ProductDitails.ProductName)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.ProductNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.ProductNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.TypeProduct)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.TypeProduct)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Destinayion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Destinayion)
+        </dd>
+    </dl>
+    <h4>Producent</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Producent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Producent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Address)
+        </dd>
+    </dl>
+    <h4>Szczegóły w cenie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Quantity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Quantity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDitails.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductDitails.Price) PLN
+        </dd>
+    </dl>
+</div>
+<div>
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a class="btn btn-success" asp-page="./Edit" asp-route-id="@Model.ProductDitails.ProductNumber">Edit</a>
+        </li>
+        <li class="list-inline-item">
+            <a class="btn btn-danger" asp-page="./Index">Back to List</a>
+        </li>
+    </ul>
+</div>

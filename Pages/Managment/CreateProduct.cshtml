@@ -1,0 +1,65 @@
+﻿@page
+@model JubiLarian.Pages.Managment.CreateProductModel
+
+@{
+    ViewData["Title"] = "Tworzenie Produktu";
+}
+
+<h1 class="text-black-50">@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.Name" class="control-label"></label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label"></label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Quantity" class="control-label"></label>
+                <input asp-for="Product.Quantity" class="form-control" />
+                <span asp-validation-for="Product.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Price" class="control-label"></label>
+                <input asp-for="Product.Price" class="form-control" />
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.IdProducent" class="control-label"></label>
+                <select asp-for="Product.IdProducent" asp-items="@(new  SelectList(Model.Producents, "Id", "Name"))" class="form-control">
+                    <option>Wybierz producenta</option>
+                </select>
+                <span asp-validation-for="Product.IdProducent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.IdType" class="control-label"></label>
+                <select asp-for="Product.IdType" asp-items="@(new  SelectList(Model.Types, "Id", "Name"))" class="form-control">
+                    <option>Wybierz typ</option>
+                </select>
+                <span asp-validation-for="Product.IdType" class="text-danger"></span>
+            </div>
+            <div class="form-inline">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <input type="submit" value="Stwórz" class="btn btn-success" />
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-danger" asp-page="Index">Przerwij i Wróć</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
