@@ -9,31 +9,36 @@
 <hr />
 <div class="text-center border p-3 mt-5">
     <form method="post">
-        @if(Model.Products.Count() > 0)
+        @if (Model.ProductList.Count() > 0)
         {
-            @foreach(var item in Model.Products)
+            @foreach (var item in Model.ProductList)
             {
                 <div id="TextSide" class="text-left">
-                    <a class="text-justify">@Html.DisplayNameFor(m => item.Name): @Html.DisplayFor(m => item.Name)</a>
-                    <a class="text-justify">@Html.DisplayNameFor(m => item.Producent.Name): @Html.DisplayFor(m => item.Producent.Name)</a>
-                    <a class="text-justify">@Html.DisplayNameFor(m => item.Type.Name): @Html.DisplayFor(m => item.Type.Name)</a>
-                    @if (int.Parse(Html.DisplayFor(m => item.Quantity).ToString()) > 0)
-                    {
-                        <a class="text-success">Produkt jest dostępny</a>
-                    }
-                    else
-                    {
-                        <a class="text-danger">Produkt jest niedosepny</a>
-                    }
-                    <a class="text-justify">@Html.DisplayNameFor(m => item.Price): @Html.DisplayFor(m => item.Price)</a>
-                    <button class="btn btn-info text-white" asp-route-id="@Html.DisplayFor(m => item.Id)" asp-page="/Ditails">Szczegóły</button>
+                    <ul class="list-group">
+                        <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.NumerProduct)</strong>@item.NumerProduct</li>
+                        <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.Name)</strong>@item.Name</li>
+                        <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.Producent)</strong>@item.Producent</li>
+                        @if (item.IsAvailable)
+                        {
+                            <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.IsAvailable)</strong><a class="text-success">Produkt jest dostępny</a></li>
+                        }
+                        else
+                        {
+                            <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.IsAvailable)</strong><a class="text-danger">Produkt jest niedosepny</a></li>
+                        }
+                        <li class="text-justify list-group-item"><strong>@Html.DisplayNameFor(m => item.Price)</strong>@item.Price PLN</li>
+                        <li class="list-group-item"><a class="btn btn-info text-white" asp-route-id="@item.NumerProduct" asp-page="Ditails">Szczegóły</a></li>
+                    </ul>
                     <hr />
                 </div>
             }
         }
         else
         {
-            <p class="text-warning text-left">Obecnie nie ma tutaj dostępnych produktów</p> 
+            <ul class="list-group">
+                <li class="text-warning text-left list-group-item">Obecnie nie ma tutaj dostępnych produktów</li>
+            </ul>
+
         }
     </form>
 </div>

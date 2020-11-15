@@ -1,0 +1,40 @@
+﻿@page
+@model JubiLarian.Pages.Managment.CreateTypeModel
+
+@{
+    ViewData["Title"] = "Tworzenie Typu";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductType.Name" class="control-label"></label>
+                <input asp-for="ProductType.Name" class="form-control" />
+                <span asp-validation-for="ProductType.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductType.Destiny" class="control-label"></label>
+                <input asp-for="ProductType.Destiny" class="form-control" />
+                <span asp-validation-for="ProductType.Destiny" class="text-danger"></span>
+            </div>
+            <div class="form-inline">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <input type="submit" value="Dodaj" class="btn btn-success" />
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-danger" asp-page="Index">Przerwij i Wróć</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
