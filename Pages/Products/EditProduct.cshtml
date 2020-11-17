@@ -2,48 +2,48 @@
 @model JubiLarian.Pages.Products.EditProductModel
 
 @{
-    ViewData["Title"] = "EditProduct";
+    ViewData["Title"] = "Edycja Productu";
 }
 
-<h1>EditProduct</h1>
+<link href="~/css/formStyle.css" rel="stylesheet" />
+<h1>@ViewData["Title"]</h1>
 
-<h4>Product</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form id="formArea" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Product.Id" />
             <div class="form-group">
                 <label asp-for="Product.Name" class="control-label"></label>
-                <input asp-for="Product.Name" class="form-control" />
+                <input asp-for="Product.Name" class="form-control" id="formTxFild" />
                 <span asp-validation-for="Product.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.Description" class="control-label"></label>
-                <input asp-for="Product.Description" class="form-control" />
+                <input asp-for="Product.Description" class="form-control" id="formTxFild" />
                 <span asp-validation-for="Product.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.Quantity" class="control-label"></label>
-                <input asp-for="Product.Quantity" class="form-control" type="number" />
+                <input asp-for="Product.Quantity" class="form-control" type="number" id="formTxFild" />
                 <span asp-validation-for="Product.Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.Price" class="control-label"></label>
-                <input asp-for="Product.Price" class="form-control" type="number" />
+                <input asp-for="Product.Price" class="form-control" type="number" id="formTxFild" />
                 <span asp-validation-for="Product.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.ProducentId" class="control-label"></label>
-                <select asp-for="Product.ProducentId" asp-items="@(new  SelectList(Model.Producents, "Id", "Name"))" class="form-control">
+                <select asp-for="Product.ProducentId" asp-items="@(new  SelectList(Model.Producents, "Id", "Name"))" class="form-control" id="formLiFild">
                     <option>Wybierz producenta</option>
                 </select>
                 <span asp-validation-for="Product.ProducentId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.TypeId" class="control-label"></label>
-                <select asp-for="Product.TypeId" asp-items="@(new  SelectList(Model.Types, "Id", "Name"))" class="form-control">
+                <select asp-for="Product.TypeId" asp-items="@(new  SelectList(Model.Types, "Id", "Name"))" class="form-control" id="formLiFild">
                     <option>Wybierz typ</option>
                 </select>
                 <span asp-validation-for="Product.TypeId" class="text-danger"></span>
@@ -51,10 +51,10 @@
             <div class="form-inline">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <input type="submit" value="Zmień" class="btn btn-success" />
+                        <input type="submit" value="Zmień" class="btn btn-success" id="okButton" />
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn btn-danger" asp-page="Index">Przerwij i Wróć</a>
+                        <a class="btn btn-danger" asp-page="Index" id="notOkButton">Przerwij i Wróć</a>
                     </li>
                 </ul>
             </div>
