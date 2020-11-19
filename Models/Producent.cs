@@ -10,7 +10,7 @@ namespace JubiLarian.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "{0} jest obowiązkowa!")]
         [Display(Name = "Nazwa")]
         [StringLength(150)]
         [DataType(DataType.Text)]

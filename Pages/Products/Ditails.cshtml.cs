@@ -29,8 +29,8 @@ namespace JubiLarian.Pages.Products
             }
 
             Product product = await _context.Product.FirstOrDefaultAsync(p => p.Id == id);
-            ProductType type = await _context.Type.FirstOrDefaultAsync(t => t.Id == product.IdType);
-            Producent producent = await _context.Producent.FirstOrDefaultAsync(p => p.Id == product.IdProducent);
+            ProductType type = await _context.Type.FirstOrDefaultAsync(t => t.Id == product.TypeId);
+            Producent producent = await _context.Producent.FirstOrDefaultAsync(p => p.Id == product.ProducentId);
 
             if (product == null)
                 return NotFound();

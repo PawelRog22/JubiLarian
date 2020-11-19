@@ -4,8 +4,11 @@
     ViewData["Title"] = "Panel zarządzania";
 }
 
-<h1 class="text-black-50">Główny @ViewData["Title"]</h1>
-<div class="text-center border m-6">
+<link href="~/css/mainPageStyle.css" rel="stylesheet" />
+<h1>Główny @ViewData["Title"]</h1>
+<hr />
+
+<div class="text-center m-6" id="mianBelt">
     <a class="btn btn-group-vertical" asp-page="CreateProduct">Strórz nowy produkt</a>
     <a class="btn btn-group-vertical" asp-page="AddProducent">Dodaj producenta</a>
     <a class="btn btn-group-vertical" asp-page="AddType">Stwórz nowy typ</a>

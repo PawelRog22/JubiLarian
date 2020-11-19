@@ -5,29 +5,30 @@
     ViewData["Title"] = "Tworzenie Producenta";
 }
 
+<link href="~/css/formStyle.css" rel="stylesheet" />
 <h1>@ViewData["Title"]</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" id="formArea">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Producent.Name" class="control-label"></label>
-                <input asp-for="Producent.Name" class="form-control" />
+                <input asp-for="Producent.Name" class="form-control" id="formTxFild"/>
                 <span asp-validation-for="Producent.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Producent.Address" class="control-label"></label>
-                <input asp-for="Producent.Address" class="form-control" />
+                <input asp-for="Producent.Address" class="form-control" id="formTxFild"/>
                 <span asp-validation-for="Producent.Address" class="text-danger"></span>
             </div>
             <div class="form-inline">
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <input type="submit" value="Dodaj" class="btn btn-success" />
+                        <input type="submit" value="Dodaj" class="btn btn-success" id="okButton"/>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn btn-danger" asp-page="Index">Przerwij i Wróć</a>
+                        <a class="btn btn-danger" asp-page="Index" id="notOkButton">Przerwij i Wróć</a>
                     </li>
                 </ul>
             </div>
