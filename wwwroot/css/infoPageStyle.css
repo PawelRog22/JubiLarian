@@ -1,0 +1,96 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+h1 {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    color: #4A7485;
+}
+
+hr {
+    background-color: #4A7485;
+}
+
+h4 {
+    font-family: 'Fondamento', cursive;
+    color: #C4B910;
+}
+
+label, dt {
+    color: #4A7485;
+    font-family: 'Raleway', sans-serif;
+}
+
+p, dd {
+    font-family: 'Ubuntu', sans-serif;
+    color: #6C96A7;
+}
+
+#firstLine {
+    margin-bottom: 50px;
+}
+
+#dataSection {
+    margin-bottom: 25px;
+}
+
+#sectiobLine {
+    background-color: #C4B910;
+}
+
+#listView {
+    border-top: 2px solid #C4B910;
+    border-left: 3px solid #C4B910;
+    border-right: 3px solid #C4B910;
+    border-radius: 5px;
+}
+
+#itemview {
+    border-bottom: 2px solid #C4B910;
+}
+
+#buttonSection {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#pragrepSucces {
+    color: #408A5F;
+}
+
+#pragrepFail {
+    color: #853222;
+}
+
+#elementLine {
+    margin-bottom: 50px;
+}
+
+#listButton {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    background-color: #408A5F;
+    border: 0px;
+    padding: 9px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+#okButton {
+    padding: 10px;
+    background-color: #408A5F;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    border: 0px;
+}
+
+#notOkButton {
+    padding: 9px;
+    background-color: #853222;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    border: 0px;
+}
