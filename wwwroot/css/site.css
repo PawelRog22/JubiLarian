@@ -1,15 +1,11 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
 
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
 }
 
 .btn-primary {
@@ -24,8 +20,6 @@ a {
   border-color: #1861ac;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   font-size: 14px;
 }
@@ -51,21 +45,52 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
 }
+
+li a {
+    font-family: 'Pangolin', cursive;
+    margin-right: 15px;
+    color: #4A7485;
+}
+
+li a:hover {
+    color: #6C96A7;
+}
+
+#logoApp {
+    font-family: 'Bangers', cursive;
+    font-size: 27px;
+    color: #C4B910;
+}
+
+#logoApp:hover {
+    color: #E6DB32;
+}
+
+#container p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#footerLink {
+    color: #C4B910;
+}
+
+    #footerLink:hover {
+        color: #E6DB32;
+        text-decoration: none;
+    }
